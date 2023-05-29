@@ -6,4 +6,12 @@
     </style>
 
     <style name="Theme.Inicio" parent="Base.Theme.Inicio" />
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">#2CFDF7</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/pokebolainicio</item>
+        <item name="windowSplashScreenAnimationDuration">300</item>
+        <item name="postSplashScreenTheme">@style/Theme.Inicio</item>
+
+
+    </style>
 </resources>
