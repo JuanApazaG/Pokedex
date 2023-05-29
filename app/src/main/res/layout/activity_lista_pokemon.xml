@@ -26,9 +26,14 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Entei contiene el fulgor  del magma en su interior.
-                Escupe numerosas rafagas de fuego que devoran.
-                Altura: 2.1m    Categoria: Volcan     Peso:198kg" />
+                android:text=" Altura: 2.1m    Categoria: Volcan     Peso:198kg" />
+
+            <Button
+                android:id="@+id/buttonpokemon_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Entei" />
+
 
         </LinearLayout>
 
@@ -48,9 +53,13 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Entei contiene el fulgor del magma en su interior.
-                Escupe numerosas rafagas de fuego que devoran.
-                Altura: 2m    Categoria: Aurora     Peso:187kg" />
+                android:text=" Altura: 2m    Categoria: Aurora     Peso:187kg" />
+
+            <Button
+                android:id="@+id/buttonpokemon_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Suicune"/>
 
         </LinearLayout>
 
@@ -70,8 +79,15 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Nacido en las profundidades subterraneas, este se convierte en pupa al comer tierra.
-                 Altura: 0.6m    Categoria: piel Roca    Peso:72kg" />
+                android:text="Altura: 0.6m    Categoria: piel Roca    Peso:72kg" />
+
+            <Button
+                android:id="@+id/buttonpokemon_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Larvitar"/>
+
+
 
         </LinearLayout>
 
@@ -102,8 +118,13 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Tiene tanta fuerza que puede cambiar el paisaje.Su naturaleza insolente le hace ser muy egoista.
-                 Altura: 2m    Categoria: coraza    Peso:202kg     Habilidad: chorro Arena" />
+                android:text="Altura: 2m    Categoria: coraza    Peso:202kg     Habilidad: chorro Arena" />
+
+            <Button
+                android:id="@+id/buttonpokemon_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tyranitar"/>
 
         </LinearLayout>
 
@@ -122,8 +143,14 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="La fuerza que tiene Lugia en las alas es devastadora, con ada que las bata es capaz de derribar edificios enteros.Por eso mismo prefiere vivir donde no haya nadie, en los mas profundo del mar.
-            Altura: 5.2m    Categoria: Buceo    Peso:216kg      Habilidad: Presion"  />
+                android:text="Altura: 5.2m    Categoria: Buceo    Peso:216kg      Habilidad: Presion"  />
+
+
+            <Button
+                android:id="@+id/buttonpokemon_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lugia"/>
 
         </LinearLayout>
 
@@ -142,8 +169,13 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="El plumaje de HO-oh contiene siete colores que puede apreciarse segun el angulo desde el que les de la luz.Dicen que sus plumas dan felicidad a quinese las llevan y , tambien que este pokemon vive a los pies del arco iris.
-                 Altura: 3.8m    Categoria: Arcoiris    Peso:199kg   Habilidad:Presion" />
+                android:text="Altura: 3.8m    Categoria: Arcoiris    Peso:199kg   Habilidad:Presion" />
+
+            <Button
+                android:id="@+id/buttonpokemon_6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="HO-OH"/>
 
         </LinearLayout>
 
