@@ -1,17 +1,154 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ListaPokemon">
+    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
+    <!-- Aquí agregarás los elementos -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Bienvenbido a la Lista de Pokemones"
-        tools:layout_editor_absoluteX="129dp"
-        tools:layout_editor_absoluteY="65dp" />
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/whatsapp_image_2023_05_28_at_21_24_19" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Entei contiene el fulgor del magma en su interior.
+                Escupe numerosas rafagas de fuego que devoran.
+                Altura: 2.1m    Categoria: Volcan     Peso:198kg" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/whatsapp_image_2023_05_28_at_21_24_19__1_"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Entei contiene el fulgor del magma en su interior.
+                Escupe numerosas rafagas de fuego que devoran.
+                Altura: 2m    Categoria: Aurora     Peso:187kg" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/whatsapp_image_2023_05_28_at_21_24_20"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nacido en las profundidades subterraneas, este se convierte en pupa al comer tierra.
+                 Altura: 0.6m    Categoria: piel Roca    Peso:72kg" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <!-- Aquí agregarás las imágenes del centro -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/whatsapp_image_2023_05_28_at_21_24_21"
+                android:scaleType="fitCenter" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tiene tanta fuerza que puede cambiar el paisaje.Su naturaleza insolente le hace ser muy egoista.
+                 Altura: 2m    Categoria: coraza    Peso:202kg     Habilidad: chorro Arena" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/whatsapp_image_2023_05_28_at_21_24_21__1_"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="La fuerza que tiene Lugia en las alas es devastadora, con ada que las bata es capaz de derribar edificios enteros.Por eso mismo prefiere vivir donde no haya nadie, en los mas profundo del mar.
+            Altura: 5.2m    Categoria: Buceo    Peso:216kg      Habilidad: Presion"  />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/whatsapp_image_2023_05_28_at_21_24_22"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="El plumaje de HO-oh contiene siete colores que puede apreciarse segun el angulo desde el que les de la luz.Dicen que sus plumas dan felicidad a quinese las llevan y , tambien que este pokemon vive a los pies del arco iris.
+                 Altura: 3.8m    Categoria: Arcoiris    Peso:199kg   Habilidad:Presion" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
 
 </LinearLayout>
