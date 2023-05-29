@@ -26,7 +26,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Entei contiene el fulgor del magma en su interior.
+                android:text="Entei contiene el fulgor  del magma en su interior.
                 Escupe numerosas rafagas de fuego que devoran.
                 Altura: 2.1m    Categoria: Volcan     Peso:198kg" />
 
