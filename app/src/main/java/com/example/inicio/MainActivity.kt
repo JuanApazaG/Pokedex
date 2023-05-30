@@ -1,9 +1,11 @@
 package com.example.inicio
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.VideoView
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 
 class MainActivity : AppCompatActivity() {
@@ -12,6 +14,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val video = findViewById<VideoView>(R.id.video)
+        val uri: Uri = Uri.parse(
+            "android.resource://" + packageName + "/raw/pikachufurioso"
+        )
+        video.setVideoURI(uri)
+        video.requestFocus()
+        video.resume()
+        video.start()
 
 
         val buttonAjustes = findViewById<Button>(R.id.buttonAjustes) as Button
