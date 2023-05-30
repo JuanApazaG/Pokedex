@@ -13,7 +13,7 @@ class DetailActivity : AppCompatActivity() {
         Thread.sleep(1000)
         screenSplash.setKeepOnScreenCondition {false}
 
-        val intent = Intent(this,MainActivity::class.java)
+        val intent = Intent(this,LoginActivity::class.java)
         startActivity(intent)
         finish()
     }
