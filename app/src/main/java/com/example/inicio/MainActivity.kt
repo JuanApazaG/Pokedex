@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
         val buttonListaPokemon = findViewById<Button>(R.id.buttonListaPokemon) as Button
 
 
+
         buttonAjustes.setOnClickListener {
             val intent = Intent (this@MainActivity,Ajustes::class.java)
             startActivity(intent)
@@ -37,5 +38,6 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent (this@MainActivity,ListaPokemon::class.java)
             startActivity(intent)
         }
+
     }
 }
