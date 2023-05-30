@@ -19,33 +19,33 @@ class ListaPokemon : AppCompatActivity() {
         val info= findViewById<Button>(R.id.infor)as Button
 
         buttonpokemon_1.setOnClickListener {
-            val intent = Intent (this@ListaPokemon,pokemon_selec::class.java)
+            val intent = Intent (this@ListaPokemon,TarjetaPokemon::class.java)
             startActivity(intent)
         }
 
         buttpokemon_2.setOnClickListener {
-            val intent = Intent (this@ListaPokemon,pokemon_selec::class.java)
+            val intent = Intent (this@ListaPokemon,TarjetaPokemon::class.java)
             startActivity(intent)
         }
 
         buttpokemon_3.setOnClickListener {
-            val intent = Intent (this@ListaPokemon,pokemon_selec::class.java)
+            val intent = Intent (this@ListaPokemon,TarjetaPokemon::class.java)
             startActivity(intent)
         }
         buttpokemon_4.setOnClickListener {
-            val intent = Intent (this@ListaPokemon,pokemon_selec::class.java)
+            val intent = Intent (this@ListaPokemon,TarjetaPokemon::class.java)
             startActivity(intent)
         }
         buttpokemon_5.setOnClickListener {
-            val intent = Intent (this@ListaPokemon,pokemon_selec::class.java)
+            val intent = Intent (this@ListaPokemon,TarjetaPokemon::class.java)
             startActivity(intent)
         }
         buttpokemon_6.setOnClickListener {
-            val intent = Intent (this@ListaPokemon,pokemon_selec::class.java)
+            val intent = Intent (this@ListaPokemon,TarjetaPokemon::class.java)
             startActivity(intent)
         }
         info.setOnClickListener {
-            val intent = Intent (this@ListaPokemon,pokemon_selec::class.java)
+            val intent = Intent (this@ListaPokemon,TarjetaPokemon::class.java)
             startActivity(intent)
         }
 
