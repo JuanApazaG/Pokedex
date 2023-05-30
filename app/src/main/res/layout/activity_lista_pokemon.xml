@@ -1,7 +1,7 @@
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
     <!-- Aquí agregarás los elementos -->
@@ -10,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
 
         <LinearLayout
             android:layout_width="0dp"
@@ -21,7 +22,7 @@
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:scaleType="fitCenter"
-                android:src="@drawable/whatsapp_image_2023_05_28_at_21_24_19" />
+                android:src="@drawable/entei" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -29,9 +30,10 @@
                 android:text=" Altura: 2.1m    Categoria: Volcan     Peso:198kg" />
 
             <Button
-                android:id="@+id/buttonpokemon_1"
+                android:id="@+id/pokemon_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="pokemon_select"
                 android:text="Entei" />
 
 
@@ -47,7 +49,7 @@
             <ImageView
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:src="@drawable/whatsapp_image_2023_05_28_at_21_24_19__1_"
+                android:src="@drawable/suicune"
                 android:scaleType="fitCenter" />
 
             <TextView
@@ -56,7 +58,7 @@
                 android:text=" Altura: 2m    Categoria: Aurora     Peso:187kg" />
 
             <Button
-                android:id="@+id/buttonpokemon_2"
+                android:id="@+id/pokemon_2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Suicune"/>
@@ -73,7 +75,7 @@
             <ImageView
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:src="@drawable/whatsapp_image_2023_05_28_at_21_24_20"
+                android:src="@drawable/larvitar"
                 android:scaleType="fitCenter" />
 
             <TextView
@@ -82,7 +84,7 @@
                 android:text="Altura: 0.6m    Categoria: piel Roca    Peso:72kg" />
 
             <Button
-                android:id="@+id/buttonpokemon_3"
+                android:id="@+id/pokemon_3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Larvitar"/>
@@ -111,7 +113,7 @@
             <ImageView
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:src="@drawable/whatsapp_image_2023_05_28_at_21_24_21"
+                android:src="@drawable/tyranitar"
                 android:scaleType="fitCenter" />
 
 
@@ -121,7 +123,7 @@
                 android:text="Altura: 2m    Categoria: coraza    Peso:202kg     Habilidad: chorro Arena" />
 
             <Button
-                android:id="@+id/buttonpokemon_4"
+                android:id="@+id/pokemon_4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Tyranitar"/>
@@ -137,7 +139,7 @@
             <ImageView
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:src="@drawable/whatsapp_image_2023_05_28_at_21_24_21__1_"
+                android:src="@drawable/lugia"
                 android:scaleType="fitCenter" />
 
             <TextView
@@ -147,7 +149,7 @@
 
 
             <Button
-                android:id="@+id/buttonpokemon_5"
+                android:id="@+id/pokemon_5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Lugia"/>
@@ -163,7 +165,7 @@
             <ImageView
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:src="@drawable/whatsapp_image_2023_05_28_at_21_24_22"
+                android:src="@drawable/hooh"
                 android:scaleType="fitCenter" />
 
             <TextView
@@ -172,7 +174,7 @@
                 android:text="Altura: 3.8m    Categoria: Arcoiris    Peso:199kg   Habilidad:Presion" />
 
             <Button
-                android:id="@+id/buttonpokemon_6"
+                android:id="@+id/pokemon_6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="HO-OH"/>
@@ -180,6 +182,39 @@
         </LinearLayout>
 
     </LinearLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="130dp"
+        android:layout_height="159dp"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="3dp"
+        app:cardElevation="4dp">
+
+        <!-- Contenido de la CardView -->
+        <LinearLayout
+            android:layout_width="130dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Botón -->
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="85dp"
+                android:layout_height="76dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/entei" />
+
+            <Button
+                android:id="@+id/infor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Entei" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
 
 
