@@ -5,8 +5,8 @@
     <item
 
         android:background="#08c6ff"
-        android:width="100dp"
-        android:height="100dp"
+        android:width="200dp"
+        android:height="200dp"
         android:gravity="center">
 
         <bitmap

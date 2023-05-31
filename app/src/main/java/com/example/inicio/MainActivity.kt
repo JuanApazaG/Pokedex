@@ -4,11 +4,17 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.VideoView
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 
 class MainActivity : AppCompatActivity() {
+    val db = Firebase.firestore
+    val TAG = "Datos"
+
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
@@ -16,7 +22,7 @@ class MainActivity : AppCompatActivity() {
 
         val video = findViewById<VideoView>(R.id.video)
         val uri: Uri = Uri.parse(
-            "android.resource://" + packageName + "/raw/pikachufurioso"
+            "android.resource://" + packageName + "/raw/intropokemon"
         )
         video.setVideoURI(uri)
         video.requestFocus()
@@ -47,5 +53,25 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent (this@MainActivity,ListaPokemon::class.java)
             startActivity(intent)
         }
+        getData()
     }
+
+    private fun getData(){
+
+        db.collection("Pokemones")
+        //db.collection("Categoria")
+            .get()
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    for (document in task.result) {
+                        Log.d(TAG, document.id + " => " + document.data)
+                    }
+                } else {
+                    Log.w(TAG, "Error getting documents.", task.exception)
+                }
+            }
+
+
+    }
+
 }
