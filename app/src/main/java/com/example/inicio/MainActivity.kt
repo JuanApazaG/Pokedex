@@ -8,6 +8,8 @@ import android.util.Log
 import android.widget.Button
 import android.widget.VideoView
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
@@ -56,22 +58,67 @@ class MainActivity : AppCompatActivity() {
         getData()
     }
 
-    private fun getData(){
+    private fun getData() {
 
+        val recyclerview = findViewById<RecyclerView>(R.id.recyclerview)
+        recyclerview.layoutManager = LinearLayoutManager(this)
+
+        val data = ArrayList<ItemsViewModel>()
+
+        Log.d(TAG,"Recuperando")
+        db.collection("Pokemones")
+            .get()
+            .addOnSuccessListener { result ->
+                for (document in result) {
+                    data.add(ItemsViewModel("Pikachu", document.data.get("PokeName").toString() ))
+
+                    //data.add(ItemsViewModel("100", document.data.get("Ataque").toString() ))
+                    Log.d(TAG, "${document.id} => ${document.data}")
+
+
+                }
+                for (document in result) {
+                    //data.add(ItemsViewModel("Pikachu", document.data.get("PokeName").toString() ))
+
+                    data.add(ItemsViewModel("100", document.data.get("Ataque").toString() ))
+                    Log.d(TAG, "${document.id} => ${document.data}")
+
+
+                }
+                val adapter = CustomAdapter(data)
+                recyclerview.adapter = adapter
+            }
+            .addOnFailureListener { exception ->
+                Log.w(TAG, "Error getting documents.", exception)
+            }
+    }
+    /*
+
+    private fun getData(){
+        val recyclerview = findViewById<RecyclerView>(R.id.recyclerview)
+        recyclerview.layoutManager = LinearLayoutManager(this)
+
+        val data = ArrayList<ItemsViewModel>()
+        for (i in 1..20) {
+            data.add(ItemsViewModel("Oso", "Item " + i))
+        }
+
+        //aqui el espacio
         db.collection("Pokemones")
         //db.collection("Categoria")
             .get()
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     for (document in task.result) {
+                        data.add(ItemsViewModel("Oso", document.data.get("nombre").toString() ))
                         Log.d(TAG, document.id + " => " + document.data)
                     }
                 } else {
                     Log.w(TAG, "Error getting documents.", task.exception)
                 }
-            }
 
-
+                val adapter = CustomAdapter(data)
+                recyclerview.adapter = adapter            }
     }
-
+*/
 }
