@@ -31,6 +31,10 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -42,6 +46,37 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.25'
     implementation 'com.google.firebase:firebase-firestore-ktx:24.6.1'
+
+
+
+
+    //IMPLENTOS PARA UTILIZAR LA API
+    // Fragment (para facilitar la creacion de viewmodel)
+    implementation "androidx.fragment:fragment-ktx:1.5.7"
+    // Activity
+    implementation "androidx.activity:activity-ktx:1.7.2"
+    // ViewModel
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1"
+    // LiveData
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.6.1"
+    // Retrofit & Gson
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation "com.squareup.retrofit2:converter-gson:2.9.0"
+    // Coroutines
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
+    // Picasso
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    // LottieFiles
+    implementation "com.airbnb.android:lottie:3.4.0"
+    // shimmer
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+
+
+
+
+
+
+
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'

@@ -7,15 +7,25 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.VideoView
-import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import com.example.inicio.ui.view.MainActivity2
+
+
 
 class MainActivity : AppCompatActivity() {
     val db = Firebase.firestore
     val TAG = "Datos"
+
+
+
+
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -53,12 +63,15 @@ class MainActivity : AppCompatActivity() {
             finish()
         }
         buttonListaPokemon.setOnClickListener {
-            val intent = Intent (this@MainActivity,ListaPokemon::class.java)
+            val intent = Intent (this@MainActivity,MainActivity2::class.java)
             startActivity(intent)
         }
 
         getData()
     }
+
+
+
 
     private fun getData() {
 
@@ -123,4 +136,8 @@ class MainActivity : AppCompatActivity() {
                 recyclerview.adapter = adapter            }
     }
 */
+
+
+
+
 }
