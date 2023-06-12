@@ -18,16 +18,19 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var binding:ActivityLoginBinding
 
     private val db = FirebaseFirestore.getInstance()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivityLoginBinding.inflate(layoutInflater)
+       binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         //setup
         setup()
 
+
     }
+
     private fun setup(){
 
         title ="autenticacion"
