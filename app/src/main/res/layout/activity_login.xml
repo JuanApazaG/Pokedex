@@ -83,12 +83,27 @@
         android:background="#9DA3E9"
         android:text="INGRESAR"
         android:textColor="@color/black"
-        app:layout_constraintVertical_bias="0.6"
-
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/butoonregistrar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appCompatEditText2" />
+        app:layout_constraintTop_toBottomOf="@+id/appCompatEditText2"
+        app:layout_constraintVertical_bias="0.604" />
+
+    <Button
+        android:id="@+id/butoonregistrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#9DA3E9"
+        android:text="REGISTRAR"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/butooningresar"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatEditText2"
+        app:layout_constraintVertical_bias="0.604" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
