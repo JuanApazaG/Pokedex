@@ -75,5 +75,6 @@ class LoginActivity : AppCompatActivity() {
     private fun showHome(){
         val homeIntent= Intent(this,MainActivity::class.java)
         startActivity(homeIntent)
+        finish()
     }
 }
