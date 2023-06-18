@@ -22,12 +22,6 @@ class MainActivity : AppCompatActivity() {
     val db = Firebase.firestore
     val TAG = "Datos"
 
-
-
-
-
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         lateinit var binding: ActivityLoginBinding
 
@@ -51,6 +45,7 @@ class MainActivity : AppCompatActivity() {
         val buttonSalir = findViewById<Button>(R.id.buttonSalir) as Button
         val buttonListaPokemon = findViewById<Button>(R.id.buttonListaPokemon) as Button
 
+        val buttonSalir2 = findViewById<Button>(R.id.buttonSalir2) as Button
 
 
         buttonAjustes.setOnClickListener {
@@ -63,6 +58,9 @@ class MainActivity : AppCompatActivity() {
         }
 
         buttonSalir.setOnClickListener {
+            finish()
+        }
+        buttonSalir2.setOnClickListener {
             finish()
         }
         buttonListaPokemon.setOnClickListener {

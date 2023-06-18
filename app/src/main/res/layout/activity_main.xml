@@ -57,6 +57,13 @@
         android:text="Salir"
         tools:layout_editor_absoluteX="152dp"
         tools:layout_editor_absoluteY="90dp" />
+    <Button
+        android:id="@+id/buttonSalir2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Salir"
+        tools:layout_editor_absoluteX="152dp"
+        tools:layout_editor_absoluteY="90dp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview"
@@ -64,6 +71,7 @@
         android:layout_height="match_parent"
         tools:itemCount="5"
         tools:listitem="@layout/card_view_design" />
+
 
 
 </LinearLayout>
