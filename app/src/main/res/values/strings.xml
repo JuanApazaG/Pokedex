@@ -20,4 +20,10 @@
     <string name="kilo"> %skg</string>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="titulo_acercade">Pokédex</string>
+    <string name="parrafo_acercade">Versión: 1.0\n
+La Pokédex es una aplicación que te permite explorar y descubrir información sobre los diferentes Pokémon.\n\n Conectada a la Poke API, esta aplicación ofrece datos completos y actualizados sobre los Pokémon.\n ¡Conviértete en un auténtico maestro Pokémon!\n
+Presenta una interfaz intuitiva que te permite explorar. Al seleccionar un Pokémon, puedes ver información detallada sobre sus características, habilidades y más.\n
+Es una herramienta útil para jugadores de los juegos de Pokémon, fans de la serie animada o simplemente para aquellos interesados en descubrir información detallada sobre estas criaturas fascinantes.\n"</string>
 </resources>
