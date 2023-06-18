@@ -10,6 +10,7 @@ import android.widget.VideoView
 
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.inicio.databinding.ActivityLoginBinding
 
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
@@ -28,9 +29,11 @@ class MainActivity : AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        lateinit var binding: ActivityLoginBinding
 
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityLoginBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         val video = findViewById<VideoView>(R.id.video)
         val uri: Uri = Uri.parse(
@@ -68,7 +71,9 @@ class MainActivity : AppCompatActivity() {
         }
 
         getData()
+
     }
+
 
 
 
