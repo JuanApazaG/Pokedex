@@ -5,8 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.view.MainActivity2">
+    tools:context=".ui.view.MainActivity2"
+    tools:ignore="ExtraText">
 
+/*estructura de la interfaz de la actividad principal de la Pokédex.
+    muestra el fragmento ListFragment dentro de un FragmentContainerView. Esto permite que el fragmento se muestre y se reemplace
+    dinámicamente en la actividad principal.*/
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView"

@@ -16,13 +16,19 @@ import com.example.inicio.ui.viewmodel.DetailsViewModel
 import com.squareup.picasso.Picasso
 
 class DetailFragment : Fragment() {
+/*DetailFragment, que es un fragmento utilizado para mostrar los detalles de un Pokémon en la interfaz de usuario.*/
 
     private var _binding: FragmentDetailBinding? = null
     private val binding get() = _binding!!
 
+    /*El fragmento DetailFragment infla el diseño del fragmento utilizando el archivo de diseño FragmentDetailBinding*/
+
     private val viewModel: DetailsViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        /*método onCreate para obtener el ID del Pokémon desde los argumentos del fragmento.
+        Esto se utiliza para cargar los detalles del Pokémon correspondiente utilizando el DetailsViewModel.*/
+
         super.onCreate(savedInstanceState)
         arguments?.let {
             idP = it.getInt("id")
@@ -30,6 +36,9 @@ class DetailFragment : Fragment() {
     }
 
     override fun onCreateView(
+
+        /*Utiliza el método onViewCreated para observar el estado de la API y los detalles del Pokémon mediante el uso del
+        DetailsViewModel*/
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
@@ -47,6 +56,8 @@ class DetailFragment : Fragment() {
     }
 
     private fun observe() {
+        /*La función observe se utiliza para observar los cambios en los detalles del Pokémon y actualizar los elementos de la
+        interfaz de usuario correspondientes, como los tipos, la imagen, el título, las estadísticas, el peso y la altura.*/
         viewModel.pokeDetails.observe(viewLifecycleOwner) { pokemon ->
 
             if (pokemon.types.size > 1) {
@@ -77,6 +88,8 @@ class DetailFragment : Fragment() {
     }
 
     private fun observeStatus() {
+        /* La función observeStatus se encarga de cambiar la visibilidad de los elementos de la interfaz de
+        usuario en función del estado de la API, como la carga en curso, la carga completada o un error.*/
         viewModel.status.observe(viewLifecycleOwner) { status ->
             when (status) {
                 ApiStatusDetail.LOADING -> {

@@ -5,7 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_app"
-    tools:context=".ui.view.ListFragment">
+    tools:context=".ui.view.ListFragment"
+    tools:ignore="ExtraText">
+
+
+    /*RecyclerView: Es un componente que se utiliza para mostrar una lista de elementos en una vista desplazable. En este caso,
+    se configura con un identificador recyclerViewPoke y se establece un GridLayoutManager para organizar los elementos en una
+    cuadrícula con dos columnas. También se establece un listitem de ejemplo para la vista previa de diseño.*/
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewPoke"
@@ -22,6 +28,11 @@
         app:spanCount="2"
         tools:listitem="@layout/list_item" />
 
+
+/*ShimmerFrameLayout: Es un componente de terceros (de la biblioteca facebook/shimmer-android) que proporciona una animación de carga
+    con efecto "shimmer". Se utiliza para mostrar una animación de carga mientras los datos se están cargando o procesando.
+    En este caso, se configura con un identificador shimmerLoading y se envuelve en un LinearLayout que contiene múltiples
+    instancias de view_loading, que representan vistas de carga en la animación.*/
     <com.facebook.shimmer.ShimmerFrameLayout
         android:id="@+id/shimmerLoading"
         android:layout_width="0dp"
@@ -48,6 +59,9 @@
 
     </com.facebook.shimmer.ShimmerFrameLayout>
 
+    /*ImageView: Es un componente que muestra una imagen estática. En este caso, se utiliza para mostrar un icono de conexión offline
+    cuando la aplicación no puede acceder a los datos en línea. Se configura con un identificador statusOffline y se establece su
+    visibilidad como oculto (gone). También se establecen las restricciones de diseño para que esté centrado en la pantalla.*/
     <ImageView
         android:id="@+id/statusOffline"
         android:layout_width="0dp"
