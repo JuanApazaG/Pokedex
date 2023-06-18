@@ -15,17 +15,9 @@ import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.example.inicio.ui.view.MainActivity2
 
-
-
 class MainActivity : AppCompatActivity() {
     val db = Firebase.firestore
     val TAG = "Datos"
-
-
-
-
-
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -41,7 +33,7 @@ class MainActivity : AppCompatActivity() {
         video.resume()
         video.start()
 
-
+        /*Creacion de variables para cada boton y los busca mediante su id como en el .xml*/
         val buttonAjustes = findViewById<Button>(R.id.buttonAjustes) as Button
 
         val buttonAcercaDe = findViewById<Button>(R.id.buttonAcercaDe) as Button
@@ -54,11 +46,14 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent (this@MainActivity,Ajustes::class.java)
             startActivity(intent)
         }
+
         buttonAcercaDe.setOnClickListener {
             val intent = Intent (this@MainActivity,AcercaDe::class.java)
             startActivity(intent)
         }
 
+        /*Lo del boton salir directamente se accede al boton con setOnlikLitener y se pone
+        "Finish()" para finalizar la accion*/
         buttonSalir.setOnClickListener {
             finish()
         }
@@ -69,8 +64,6 @@ class MainActivity : AppCompatActivity() {
 
         getData()
     }
-
-
 
 
     private fun getData() {
@@ -90,14 +83,12 @@ class MainActivity : AppCompatActivity() {
                     //data.add(ItemsViewModel("100", document.data.get("Ataque").toString() ))
                     Log.d(TAG, "${document.id} => ${document.data}")
 
-
                 }
                 for (document in result) {
                     //data.add(ItemsViewModel("Pikachu", document.data.get("PokeName").toString() ))
 
                     data.add(ItemsViewModel("100", document.data.get("Ataque").toString() ))
                     Log.d(TAG, "${document.id} => ${document.data}")
-
 
                 }
                 val adapter = CustomAdapter(data)
@@ -136,8 +127,5 @@ class MainActivity : AppCompatActivity() {
                 recyclerview.adapter = adapter            }
     }
 */
-
-
-
 
 }

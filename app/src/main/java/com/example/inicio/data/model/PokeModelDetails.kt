@@ -5,6 +5,8 @@ import com.google.gson.annotations.SerializedName
 
 // https://pokeapi.co/api/v2/pokemon/25/
 
+//Data class para la obtencion de datos "serializedname es algo que hace que se pueda mapear los archivos json
+//es decir que se podra buscar o acceder a informacion a travez del nombre de los atributos
 data class PokeModelDetails(
     @SerializedName("id") val id: Int,
     @SerializedName("height") val height: Int,
