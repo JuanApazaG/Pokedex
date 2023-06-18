@@ -75,7 +75,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                tools:ignore="ExtraText">
 
                 <View
                     android:layout_width="match_parent"
@@ -97,11 +98,13 @@
                     android:layout_marginBottom="@dimen/space_small"
                     android:background="@color/background_type" />
 
+                /*crea un diseño en forma de barra con dos tarjetas anidadas que se distribuyen horizontalmente.
+                Las tarjetas pueden utilizarse para mostrar un indicador visual o un efecto de carga en una aplicación de Android.*/
+                */
             </LinearLayout>
         </androidx.cardview.widget.CardView>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 
 

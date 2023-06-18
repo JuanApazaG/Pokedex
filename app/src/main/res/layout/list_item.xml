@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
+
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -6,18 +9,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     app:cardBackgroundColor="@color/black"
     app:cardCornerRadius="@dimen/space_small"
-    app:cardUseCompatPadding="true">
+    app:cardUseCompatPadding="true"
+    tools:ignore="ExtraText">
+
+    /*CardView (tarjeta principal): Es el contenedor principal que envuelve todo el diseño del elemento de lista. Se configura con un
+    ancho match_parent y un alto wrap_content. Se establece un color de fondo con app:cardBackgroundColor,
+    se aplica un radio a las esquinas con app:cardCornerRadius y se habilita el uso de relleno de
+    compatibilidad con app:cardUseCompatPadding.*/
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="2dp"
         app:cardCornerRadius="@dimen/space_small">
+/*CardView anidado (tarjeta interna): Se utiliza dentro de la tarjeta principal para crear una separación visual entre los
+        elementos de la lista. Tiene un margen de 2dp y un radio de esquina app:cardCornerRadius.*/
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
+/*ImageView: Muestra una imagen del Pokémon. Se configura con un ancho match_parent y una altura fija de 200dp. También se
+            establece un fondo de color y se proporciona una descripción del contenido. Para la vista previa del diseño,
+            se utiliza un atributo tools:srcCompat para mostrar una imagen de ejemplo.*/
 
             <ImageView
                 android:id="@+id/ivPokemon"
@@ -29,7 +44,8 @@
                 android:padding="4dp"
                 tools:ignore="ImageContrastCheck"
                 tools:srcCompat="@tools:sample/avatars" />
-
+/*TextView (tvId): Muestra el número de identificación del Pokémon. Tiene un ancho y alto wrap_content, un tamaño de texto
+            y colores personalizados.*/
             <TextView
                 android:id="@+id/tvId"
                 android:layout_width="wrap_content"
@@ -38,7 +54,8 @@
                 android:textColor="@color/text_id"
                 android:textSize="@dimen/text_x_small"
                 android:layout_margin="@dimen/space_small" />
-
+/*TextView (tvName): Muestra el nombre del Pokémon. También tiene un ancho y alto wrap_content, un tamaño de texto y
+            colores personalizados.*/
             <TextView
                 android:id="@+id/tvName"
                 android:layout_width="wrap_content"
