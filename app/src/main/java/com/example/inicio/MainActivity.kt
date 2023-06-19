@@ -5,7 +5,10 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.Button
+import android.widget.Toast
 import android.widget.VideoView
 
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -32,6 +35,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        MyToolbar().show(this,"actividad1",false)
+
+        val buttonAjustes1 = findViewById<Button>(R.id.btnToActivityTwo) as Button
+        buttonAjustes1.setOnClickListener {
+            startActivity(Intent(this,Ajustes::class.java))
+        }
 
         val video = findViewById<VideoView>(R.id.video)
         val uri: Uri = Uri.parse(
@@ -80,8 +90,18 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_contextual,menu)
+        return super.onCreateOptionsMenu(menu)
+    }
 
-
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if(item.itemId == R.id.option_one)
+            Toast.makeText(this,"Abriste opcion 1", Toast.LENGTH_SHORT).show()
+        if(item.itemId == R.id.option_two)
+            startActivity(Intent(this,Ajustes::class.java))
+        return super.onOptionsItemSelected(item)
+    }
 
 
     private fun getData() {

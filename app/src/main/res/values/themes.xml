@@ -21,6 +21,11 @@
 
     </style>
 
+    <style name="ToolbarTheme" parent="ThemeOverlay.AppCompat.ActionBar">
+        <item name="colorControlNormal">@color/white</item>
+        <item name="titleTextColor">@color/white</item>
+    </style>
+    
     <style name="Theme.Inicio" parent="Base.Theme.Inicio" />
 
     <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">

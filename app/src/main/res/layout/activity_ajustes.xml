@@ -6,11 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".Ajustes">
 
+    <include
+        layout="@layout/action_bar_toolbar"/>
+
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:text="Ajustes"
-        tools:layout_editor_absoluteX="160dp"
-        tools:layout_editor_absoluteY="190dp" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Esta es la actividad2"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </LinearLayout>
