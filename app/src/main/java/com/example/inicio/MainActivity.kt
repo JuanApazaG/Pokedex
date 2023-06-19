@@ -10,6 +10,7 @@ import android.widget.VideoView
 
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.inicio.PokeApiv2.PokemonListActivity
 import com.example.inicio.databinding.ActivityLoginBinding
 import com.example.inicio.databinding.ActivityMainBinding
 
@@ -46,7 +47,7 @@ class MainActivity : AppCompatActivity() {
         val buttonSalir = findViewById<Button>(R.id.buttonSalir) as Button
         val buttonListaPokemon = findViewById<Button>(R.id.buttonListaPokemon) as Button
 
-        val buttonSalir2 = findViewById<Button>(R.id.buttonSalir2) as Button
+        val buttonBuscar = findViewById<Button>(R.id.buttonBuscar) as Button
 
 
         buttonAjustes.setOnClickListener {
@@ -59,10 +60,12 @@ class MainActivity : AppCompatActivity() {
         }
 
         buttonSalir.setOnClickListener {
-            finish()
+            val intent = Intent(this@MainActivity,PokemonListActivity::class.java)
+            startActivity(intent)
         }
-        buttonSalir2.setOnClickListener {
-            finish()
+        buttonBuscar.setOnClickListener {
+            val intent = Intent(this@MainActivity,PokemonListActivity::class.java)
+            startActivity(intent)
         }
         buttonListaPokemon.setOnClickListener {
             val intent = Intent (this@MainActivity,MainActivity2::class.java)
@@ -79,8 +82,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun getData() {
 
-        val recyclerview = findViewById<RecyclerView>(R.id.recyclerview)
-        recyclerview.layoutManager = LinearLayoutManager(this)
+//        val recyclerview = findViewById<RecyclerView>(R.id.recyclerview)
+//        recyclerview.layoutManager = LinearLayoutManager(this)
 
         val data = ArrayList<ItemsViewModel>()
 
@@ -104,8 +107,8 @@ class MainActivity : AppCompatActivity() {
 
 
                 }
-                val adapter = CustomAdapter(data)
-                recyclerview.adapter = adapter
+//                val adapter = CustomAdapter(data)
+//                recyclerview.adapter = adapter
             }
             .addOnFailureListener { exception ->
                 Log.w(TAG, "Error getting documents.", exception)
