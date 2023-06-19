@@ -8,6 +8,6 @@ class Ajustes : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ajustes)
 
-        MyToolbar().show(this,"actividad2",true)
+        MyToolbar().show(this,"ajustes",true)
     }
 }

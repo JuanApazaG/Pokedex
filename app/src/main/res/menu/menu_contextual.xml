@@ -3,8 +3,11 @@
 
     <item
         android:id="@+id/option_one"
-        android:title="Opncion 1"/>
+        android:title="Menu"/>
     <item
         android:id="@+id/option_two"
-        android:title="Opncion 2"/>
+        android:title="Ajustes"/>
+    <item
+        android:id="@+id/option_three"
+        android:title="AcercaDe"/>
 </menu>

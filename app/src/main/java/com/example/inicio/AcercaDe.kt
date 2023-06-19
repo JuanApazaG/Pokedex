@@ -22,8 +22,10 @@ class AcercaDe : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_acerca_de)
 
-       binding=ActivityAcercaDeBinding.inflate(layoutInflater)
+
+        binding=ActivityAcercaDeBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        MyToolbar().show(this,"acerca de",true)
 
 
 

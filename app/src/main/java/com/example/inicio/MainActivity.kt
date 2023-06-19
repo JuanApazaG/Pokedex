@@ -36,11 +36,16 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        MyToolbar().show(this,"actividad1",false)
+        MyToolbar().show(this,"Menu",false)
 
-        val buttonAjustes1 = findViewById<Button>(R.id.btnToActivityTwo) as Button
+        val buttonAjustes1 = findViewById<Button>(R.id.buttonAjustes) as Button
         buttonAjustes1.setOnClickListener {
             startActivity(Intent(this,Ajustes::class.java))
+        }
+
+        val buttonAcercaDe2 = findViewById<Button>(R.id.buttonAcercaDe) as Button
+        buttonAcercaDe2.setOnClickListener {
+            startActivity(Intent(this,AcercaDe::class.java))
         }
 
         val video = findViewById<VideoView>(R.id.video)
@@ -100,6 +105,8 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this,"Abriste opcion 1", Toast.LENGTH_SHORT).show()
         if(item.itemId == R.id.option_two)
             startActivity(Intent(this,Ajustes::class.java))
+        if(item.itemId == R.id.option_three)
+            startActivity(Intent(this,AcercaDe::class.java))
         return super.onOptionsItemSelected(item)
     }
 
