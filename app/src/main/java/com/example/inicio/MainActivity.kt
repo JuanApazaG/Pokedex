@@ -10,8 +10,10 @@ import android.widget.VideoView
 
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+
 import com.example.inicio.PokeApiv2.PokemonListActivity
 import com.example.inicio.databinding.ActivityLoginBinding
+
 import com.example.inicio.databinding.ActivityMainBinding
 
 import com.google.firebase.firestore.ktx.firestore
@@ -50,6 +52,7 @@ class MainActivity : AppCompatActivity() {
         val buttonBuscar = findViewById<Button>(R.id.buttonBuscar) as Button
 
 
+
         buttonAjustes.setOnClickListener {
             val intent = Intent (this@MainActivity,Ajustes::class.java)
             startActivity(intent)
@@ -63,10 +66,12 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this@MainActivity,PokemonListActivity::class.java)
             startActivity(intent)
         }
+
         buttonBuscar.setOnClickListener {
             val intent = Intent(this@MainActivity,PokemonListActivity::class.java)
             startActivity(intent)
         }
+
         buttonListaPokemon.setOnClickListener {
             val intent = Intent (this@MainActivity,MainActivity2::class.java)
             startActivity(intent)
