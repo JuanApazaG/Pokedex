@@ -13,6 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="264dp"
         android:text="hello"
+        android:layout_margin="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,12 +25,7 @@
     android:layout_height="wrap_content"
     app:srcCompat="@drawable/pokemonlogooo" />
      -->
-    <EditText
-        android:id="@+id/editTextSearch"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Buscar..."
-        android:textColor="#650909" />
+
     <Button
         android:id="@+id/buttonListaPokemon"
         android:layout_width="match_parent"

@@ -63,8 +63,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         buttonSalir.setOnClickListener {
-            val intent = Intent(this@MainActivity,PokemonListActivity::class.java)
-            startActivity(intent)
+            finish()
         }
 
         buttonBuscar.setOnClickListener {
