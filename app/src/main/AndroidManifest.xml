@@ -58,6 +58,9 @@
             android:exported="true" />
         <activity
             android:name=".MainActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".PokeApiv2.PokemonListActivity"
             android:exported="true">
         </activity>
     </application>
