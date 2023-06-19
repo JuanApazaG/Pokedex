@@ -10,7 +10,7 @@ import android.widget.VideoView
 
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.inicio.databinding.ActivityLoginBinding
+
 import com.example.inicio.databinding.ActivityMainBinding
 
 import com.google.firebase.firestore.ktx.firestore
@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity() {
         val buttonSalir = findViewById<Button>(R.id.buttonSalir) as Button
         val buttonListaPokemon = findViewById<Button>(R.id.buttonListaPokemon) as Button
 
-        val buttonSalir2 = findViewById<Button>(R.id.buttonSalir2) as Button
+
 
 
         buttonAjustes.setOnClickListener {
@@ -61,9 +61,7 @@ class MainActivity : AppCompatActivity() {
         buttonSalir.setOnClickListener {
             finish()
         }
-        buttonSalir2.setOnClickListener {
-            finish()
-        }
+
         buttonListaPokemon.setOnClickListener {
             val intent = Intent (this@MainActivity,MainActivity2::class.java)
             startActivity(intent)
